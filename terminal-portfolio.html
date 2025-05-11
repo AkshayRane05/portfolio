@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation" id="bgAnimation"></div>
+    <canvas id="matrixRain"></canvas>
+
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <div class="sidebar-item active" onclick="executeCommand('banner')">
+                <i class="fas fa-terminal"></i>
+                <span>Terminal</span>
+            </div>
+            <div class="sidebar-item" onclick="executeCommand('about')">
+                <i class="fas fa-user"></i>
+                <span>About Me</span>
+            </div>
+            <div class="sidebar-item" onclick="executeCommand('skills')">
+                <i class="fas fa-code"></i>
+                <span>Skills</span>
+            </div>
+            <div class="sidebar-item" onclick="executeCommand('projects')">
+                <i class="fas fa-project-diagram"></i>
+                <span>Projects</span>
+            </div>
+            <div class="sidebar-item" onclick="executeCommand('contact')">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </div>
+            <div class="sidebar-item" onclick="executeCommand('github')">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </div>
+            <div class="sidebar-item" onclick="executeCommand('linkedin')">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </div>
+            <div class="sidebar-item" onclick="executeCommand('resume')">
+                <i class="fas fa-file-alt"></i>
+                <span>Resume</span>
+            </div>
+            <div class="sidebar-item" onclick="executeCommand('help')">
+                <i class="fas fa-question-circle"></i>
+                <span>Help</span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="window-buttons">
+                        <div class="window-button close"></div>
+                        <div class="window-button minimize"></div>
+                        <div class="window-button maximize"></div>
+                    </div>
+                    <div class="terminal-title">visitor@portfolio ~ bash</div>
+                </div>
+                <div id="terminal"></div>
+                <div id="input-line">
+                    <span id="prompt">visitor@portfolio:~$</span>
+                    <input type="text" id="user-input" autofocus>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
